@@ -6,34 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <!-- Materialize CSS -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
-
   <title>Sara Ahmad | ML Enthusiast & Python Developer</title>
 
+  <!-- Meta Tags -->
   <meta property="og:title" content="Sara Ahmad | ML Enthusiast & Python Developer" />
   <meta property="og:description" content="Aspiring Machine Learning Developer" />
   <meta name="author" content="Sara Ahmad" />
   <meta name="description" content="Aspiring ML developer passionate about Python and machine learning." />
+
+  <!-- Materialize CSS & Font Awesome -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/materialize/0.95.3/css/materialize.min.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
   <style>
     body { font-family: 'Segoe UI', sans-serif; background: #f5f5f5; }
 
     .side-nav.fixed { background: #1a1a2e; box-shadow: 2px 0 12px rgba(0,0,0,0.15); }
     .side-nav .logo { text-align: center; padding: 24px 0 10px; }
-    .profile-pic { width: 90px; height: 90px; object-fit: cover; border: 3px solid #e94560; }
     .side-nav li a { color: #e94560 !important; font-size: 14px; letter-spacing: 0.5px; }
     .side-nav li a:hover { background: rgba(233,69,96,0.12) !important; }
     .side-nav li a i { margin-right: 8px; }
 
-    #intro {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-    }
+    #intro { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); min-height: 100vh; display: flex; align-items: center; }
     #intro .content { padding: 60px 20px 40px; }
     #intro h2 { color: #fff; font-size: 2.4rem; font-weight: 700; }
     #intro h2 span.pink { color: #e94560; }
@@ -41,32 +35,20 @@
     #intro p.tagline { color: #ccd6f6; font-size: 1.05rem; line-height: 1.7; max-width: 600px; }
 
     .social { margin: 20px 0; }
-    .icon-btn {
-      width: 40px; height: 40px; border-radius: 50%;
-      border: none; cursor: pointer; margin-right: 10px;
-      font-size: 16px; color: #fff; transition: transform 0.2s;
-    }
+    .icon-btn { width: 40px; height: 40px; border-radius: 50%; border: none; cursor: pointer; margin-right: 10px; font-size: 16px; color: #fff; transition: transform 0.2s; }
     .icon-btn:hover { transform: scale(1.15); }
     .icon-btn.linkedin { background: #0077b5; }
-    .icon-btn.github   { background: #333; }
-    .icon-btn.kaggle   { background: #20beff; }
+    .icon-btn.github { background: #333; }
+    .icon-btn.kaggle { background: #20beff; }
 
     .buttons { margin-top: 24px; }
-    .readme, .contactme {
-      display: inline-block; padding: 10px 28px; border-radius: 30px;
-      margin-right: 12px; font-size: 14px; font-weight: 600;
-      text-decoration: none; transition: all 0.25s;
-    }
-    .readme    { border: 2px solid #e94560; color: #e94560; }
+    .readme, .contactme { display: inline-block; padding: 10px 28px; border-radius: 30px; margin-right: 12px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.25s; }
+    .readme { border: 2px solid #e94560; color: #e94560; }
     .readme:hover { background: #e94560; color: #fff; }
     .contactme { background: #e94560; color: #fff; border: 2px solid #e94560; }
     .contactme:hover { background: transparent; color: #e94560; }
 
-    .page-title {
-      background: linear-gradient(90deg, #e94560, #0f3460);
-      color: #fff !important; padding: 14px 28px;
-      font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 30px;
-    }
+    .page-title { background: linear-gradient(90deg, #e94560, #0f3460); color: #fff !important; padding: 14px 28px; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 30px; }
 
     .card { border-radius: 10px; box-shadow: 0 3px 14px rgba(0,0,0,0.08); }
     .card-title a { font-weight: 700; font-size: 1.1rem; }
@@ -74,48 +56,16 @@
     .card ul li { margin-bottom: 6px; font-size: 0.93rem; line-height: 1.6; }
     .card-action { color: #888; font-size: 0.85rem; }
 
-    .skill-pill {
-      display: inline-block; background: #1a1a2e; color: #e94560;
-      border: 1px solid #e94560; border-radius: 20px;
-      padding: 5px 16px; margin: 5px 4px; font-size: 13px;
-    }
+    .skill-pill { display: inline-block; background: #1a1a2e; color: #e94560; border: 1px solid #e94560; border-radius: 20px; padding: 5px 16px; margin: 5px 4px; font-size: 13px; }
     .skill-pill.main { background: #e94560; color: #fff; border-color: #e94560; font-weight: 600; }
 
-    .project-badge {
-      display: inline-block; background: #0f3460; color: #a8d8ea;
-      border-radius: 4px; padding: 2px 10px; font-size: 11px; margin-bottom: 8px;
-    }
-
-    #about { background: #fff; }
-    #about p { line-height: 1.8; font-size: 1rem; color: #444; }
-
-    #contact { background: #1a1a2e; }
-    #contact h3 { background: none !important; color: #e94560 !important; }
-    #contact p a { color: #a8b2d8; font-size: 15px; margin-left: 14px; }
-    #contact .contact-icon {
-      width: 42px; height: 42px; border-radius: 50%;
-      background: #e94560; color: #fff;
-      display: inline-flex; align-items: center; justify-content: center;
-      margin-right: 6px; font-size: 16px;
-    }
-
-    .edu-badge { color: #e94560; font-weight: 700; }
-    .typed-cursor { color: #e94560; }
-
-    .skill-bar-wrap { margin: 8px 0 16px; }
-    .skill-bar-label { font-size: 13px; color: #555; margin-bottom: 4px; display: flex; justify-content: space-between; }
-    .skill-bar-bg { background: #eee; border-radius: 10px; height: 8px; }
-    .skill-bar-fill { height: 8px; border-radius: 10px; background: linear-gradient(90deg, #e94560, #0f3460); }
-
-    @media (max-width: 600px) {
-      #intro h2 { font-size: 1.7rem; }
-      .side-nav.fixed { display: none; }
-    }
+    @media (max-width: 600px) { #intro h2 { font-size: 1.7rem; } .side-nav.fixed { display: none; } }
   </style>
 </head>
 
 <body>
 
+  <!-- Sidebar Navigation -->
   <nav class="hide-on-small-only">
     <ul class="side-nav fixed section table-of-contents">
       <li class="logo">
@@ -124,30 +74,32 @@
         </a>
         <p style="color:#a8b2d8;text-align:center;font-size:13px;margin-top:8px;">Sara Ahmad</p>
       </li>
-      <li class="bold"><a href="#about"    class="waves-effect waves-dark"><i class="fa fa-user small"></i><span>About</span></a></li>
-      <li class="bold"><a href="#skills"   class="waves-effect waves-dark"><i class="fa fa-code small"></i><span>Skills</span></a></li>
+      <li class="bold"><a href="#about" class="waves-effect waves-dark"><i class="fa fa-user small"></i><span>About</span></a></li>
+      <li class="bold"><a href="#skills" class="waves-effect waves-dark"><i class="fa fa-code small"></i><span>Skills</span></a></li>
       <li class="bold"><a href="#projects" class="waves-effect waves-dark"><i class="fa fa-flask small"></i><span>Projects</span></a></li>
       <li class="bold"><a href="#education" class="waves-effect waves-dark"><i class="fa fa-graduation-cap small"></i><span>Education</span></a></li>
-      <li class="bold"><a href="#contact"  class="waves-effect waves-dark"><i class="fa fa-envelope small"></i><span>Contact</span></a></li>
+      <li class="bold"><a href="#contact" class="waves-effect waves-dark"><i class="fa fa-envelope small"></i><span>Contact</span></a></li>
     </ul>
   </nav>
 
+  <!-- Mobile Navigation -->
   <nav class="hide-on-large only trigger z-depth-1" style="background:#1a1a2e;">
     <a href="#" data-activates="slide-out" class="button-collapse" style="color:#e94560;padding:14px;"><i class="fa fa-bars"></i></a>
     <div style="display:inline-block;vertical-align:middle;color:#e94560;font-weight:700;">Sara Ahmad</div>
   </nav>
   <nav class="hide-on-large only">
     <ul id="slide-out" class="side-nav" style="background:#1a1a2e;">
-      <li><a href="#about"     style="color:#e94560;">About</a></li>
-      <li><a href="#skills"    style="color:#e94560;">Skills</a></li>
-      <li><a href="#projects"  style="color:#e94560;">Projects</a></li>
+      <li><a href="#about" style="color:#e94560;">About</a></li>
+      <li><a href="#skills" style="color:#e94560;">Skills</a></li>
+      <li><a href="#projects" style="color:#e94560;">Projects</a></li>
       <li><a href="#education" style="color:#e94560;">Education</a></li>
-      <li><a href="#contact"   style="color:#e94560;">Contact</a></li>
+      <li><a href="#contact" style="color:#e94560;">Contact</a></li>
     </ul>
   </nav>
 
   <main>
 
+    <!-- Intro Section -->
     <section id="intro" class="section scrollspy full-height">
       <div class="container">
         <div class="col-md-9">
@@ -162,18 +114,12 @@
               </p>
             </div>
             <div class="social" style="margin-top:24px;">
-              <a href="https://linkedin.com/in/sara-ahmad-258a433a2/" target="_blank">
-                <button class="icon-btn linkedin"><i class="fa fa-linkedin"></i></button>
-              </a>
-              <a href="https://github.com/saraahmad" target="_blank">
-                <button class="icon-btn github"><i class="fa fa-github"></i></button>
-              </a>
-              <a href="https://kaggle.com/saraahmad" target="_blank">
-                <button class="icon-btn kaggle"><i class="fa fa-bar-chart"></i></button>
-              </a>
+              <a href="https://linkedin.com/in/sara-ahmad-258a433a2/" target="_blank"><button class="icon-btn linkedin"><i class="fa fa-linkedin"></i></button></a>
+              <a href="https://github.com/saraahmad" target="_blank"><button class="icon-btn github"><i class="fa fa-github"></i></button></a>
+              <a href="https://kaggle.com/saraahmad" target="_blank"><button class="icon-btn kaggle"><i class="fa fa-bar-chart"></i></button></a>
             </div>
             <div class="buttons">
-              <a href="#about"   class="readme">Read More</a>
+              <a href="#about" class="readme">Read More</a>
               <a href="#contact" class="contactme">Contact Me</a>
             </div>
           </div>
@@ -181,5 +127,59 @@
       </div>
     </section>
 
-    <!-- The rest of your HTML (About, Skills, Projects, Education, Contact) remains the same,
-         just make sure all the links are replaced as I did above for LinkedIn, GitHub, Kaggle, Email -->
+    <!-- About Section -->
+    <section id="about" class="section scrollspy">
+      <div class="container">
+        <h2 class="page-title">About Me</h2>
+        <p>
+          Hi, I'm <strong>Sara Ahmad</strong>, an aspiring Machine Learning Developer and Python enthusiast.
+          I have experience working with Python, NumPy, Pandas, Matplotlib, and Scikit-learn.
+          I enjoy building real-world machine learning projects and applying data-driven solutions.
+        </p>
+        <p>
+          My goal is to grow as a skilled ML developer and contribute to innovative projects that solve real problems.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section scrollspy">
+      <div class="container">
+        <h2 class="page-title">Skills</h2>
+        <span class="skill-pill main">Python</span>
+        <span class="skill-pill">NumPy</span>
+        <span class="skill-pill">Pandas</span>
+        <span class="skill-pill">Matplotlib</span>
+        <span class="skill-pill">Scikit-learn</span>
+        <span class="skill-pill">Machine Learning</span>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section scrollspy">
+      <div class="container">
+        <h2 class="page-title">Projects</h2>
+        <!-- Add project cards here -->
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section scrollspy">
+      <div class="container">
+        <h2 class="page-title">Education</h2>
+        <!-- Add education info here -->
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section scrollspy">
+      <div class="container">
+        <h2 class="page-title">Contact</h2>
+        <p>Email: <a href="mailto:sara.ahmad@example.com">sara.ahmad@example.com</a></p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
